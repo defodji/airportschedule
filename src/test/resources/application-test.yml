@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/airport
+    password: postgres
+    username: postgres
+    initialization-mode: always
+    initialize: true
+    schema: classpath:/schema.sql
+    continue-on-error: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
